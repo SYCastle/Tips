@@ -1,4 +1,10 @@
-#各クラスの概要
+# 参考
+
+https://www.techscore.com/tech/Java/JavaSE/Thread/index/
+https://java.keicode.com/lang/multithreading-executor.php
+
+# 各クラスの概要
+
 ## Main(役割：依頼者/Client)
 
 
