@@ -1,6 +1,5 @@
 # Tips link
 
-## Findbugs
+## API Xml 
 
-https://itsakura.com/findbugs_install
-
+http://m-shige1979.hatenablog.com/entry/2016/12/23/080000
