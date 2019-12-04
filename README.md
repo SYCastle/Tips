@@ -1,5 +1,5 @@
 # Tips link
 
-## API Xml 
+## 正規方程式
 
-http://m-shige1979.hatenablog.com/entry/2016/12/23/080000
+https://freestylewiki.xyz/fswiki/wiki.cgi?page=Coursera+%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92+%2D+Week2#p13
