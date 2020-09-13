@@ -1,0 +1,2943 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.0801.1333                               -->
+<workbook original-version='18.1' source-build='2020.3.0 (20203.20.0801.1333)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='得意客' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+        <calculation class='tableau' formula='5' />
+        <range granularity='5' max='20' min='5' />
+      </column>
+      <column caption='利益ビンのサイズ' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='200'>
+        <calculation class='tableau' formula='200' />
+        <range granularity='50' max='200' min='50' />
+      </column>
+    </datasource>
+    <datasource caption='サンプル - スーパーストア_サンプル - スーパーストア_移行済みデータ_12月除外+' inline='true' name='federated.1sus9cb1m40u551d2jcsb0xsi5oe' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='サンプル - スーパーストア_サンプル - スーパーストア_1' name='textscan.1vgehix0dzuuyl127r20k0cxfvkc'>
+            <connection class='textscan' directory='C:/Users/sawadayuki/Desktop' filename='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[カテゴリ]' />
+              <expression op='[rank.csv].[カテゴリ]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.1vgehix0dzuuyl127r20k0cxfvkc' name='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' table='[サンプル - スーパーストア_サンプル - スーパーストア_1#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='ja_JP' separator=','>
+              <column datatype='string' name='オーダー Id' ordinal='0' />
+              <column datatype='date' name='オーダー日' ordinal='1' />
+              <column datatype='string' name='カテゴリ' ordinal='2' />
+              <column datatype='string' name='カテゴリ (Rank.Csv)' ordinal='3' />
+              <column datatype='string' name='サブカテゴリ' ordinal='4' />
+              <column datatype='string' name='メーカー' ordinal='5' />
+              <column datatype='string' name='ランク' ordinal='6' />
+              <column datatype='string' name='出荷モード' ordinal='7' />
+              <column datatype='date' name='出荷日' ordinal='8' />
+              <column datatype='string' name='利益' ordinal='9' />
+              <column datatype='string' name='国/領域' ordinal='10' />
+              <column datatype='string' name='地域' ordinal='11' />
+              <column datatype='string' name='市区町村' ordinal='12' />
+              <column datatype='string' name='製品名' ordinal='13' />
+              <column datatype='string' name='都道府県' ordinal='14' />
+              <column datatype='string' name='顧客区分' ordinal='15' />
+              <column datatype='string' name='顧客名' ordinal='16' />
+              <column datatype='integer' name='レコード数' ordinal='17' />
+              <column datatype='integer' name='レコード数 1' ordinal='18' />
+              <column datatype='real' name='利益率' ordinal='19' />
+              <column datatype='real' name='割引率' ordinal='20' />
+              <column datatype='integer' name='売上' ordinal='21' />
+              <column datatype='integer' name='数量' ordinal='22' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1vgehix0dzuuyl127r20k0cxfvkc' name='rank.csv' table='[rank#csv]' type='table'>
+            <columns character-set='Shift_JIS' header='yes' locale='ja_JP' separator=','>
+              <column datatype='string' name='カテゴリ' ordinal='0' />
+              <column datatype='string' name='ランク' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[カテゴリ]' />
+              <expression op='[rank.csv].[カテゴリ]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.1vgehix0dzuuyl127r20k0cxfvkc' name='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' table='[サンプル - スーパーストア_サンプル - スーパーストア_1#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='ja_JP' separator=','>
+              <column datatype='string' name='オーダー Id' ordinal='0' />
+              <column datatype='date' name='オーダー日' ordinal='1' />
+              <column datatype='string' name='カテゴリ' ordinal='2' />
+              <column datatype='string' name='カテゴリ (Rank.Csv)' ordinal='3' />
+              <column datatype='string' name='サブカテゴリ' ordinal='4' />
+              <column datatype='string' name='メーカー' ordinal='5' />
+              <column datatype='string' name='ランク' ordinal='6' />
+              <column datatype='string' name='出荷モード' ordinal='7' />
+              <column datatype='date' name='出荷日' ordinal='8' />
+              <column datatype='string' name='利益' ordinal='9' />
+              <column datatype='string' name='国/領域' ordinal='10' />
+              <column datatype='string' name='地域' ordinal='11' />
+              <column datatype='string' name='市区町村' ordinal='12' />
+              <column datatype='string' name='製品名' ordinal='13' />
+              <column datatype='string' name='都道府県' ordinal='14' />
+              <column datatype='string' name='顧客区分' ordinal='15' />
+              <column datatype='string' name='顧客名' ordinal='16' />
+              <column datatype='integer' name='レコード数' ordinal='17' />
+              <column datatype='integer' name='レコード数 1' ordinal='18' />
+              <column datatype='real' name='利益率' ordinal='19' />
+              <column datatype='real' name='割引率' ordinal='20' />
+              <column datatype='integer' name='売上' ordinal='21' />
+              <column datatype='integer' name='数量' ordinal='22' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1vgehix0dzuuyl127r20k0cxfvkc' name='rank.csv' table='[rank#csv]' type='table'>
+            <columns character-set='Shift_JIS' header='yes' locale='ja_JP' separator=','>
+              <column datatype='string' name='カテゴリ' ordinal='0' />
+              <column datatype='string' name='ランク' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[オーダー Id]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[オーダー Id]' />
+          <map key='[オーダー日]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[オーダー日]' />
+          <map key='[カテゴリ (Rank.Csv)]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[カテゴリ (Rank.Csv)]' />
+          <map key='[カテゴリ (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[カテゴリ]' />
+          <map key='[カテゴリ]' value='[rank.csv].[カテゴリ]' />
+          <map key='[サブカテゴリ]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[サブカテゴリ]' />
+          <map key='[メーカー]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[メーカー]' />
+          <map key='[ランク (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[ランク]' />
+          <map key='[ランク]' value='[rank.csv].[ランク]' />
+          <map key='[レコード数 1]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[レコード数 1]' />
+          <map key='[レコード数]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[レコード数]' />
+          <map key='[出荷モード]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[出荷モード]' />
+          <map key='[出荷日]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[出荷日]' />
+          <map key='[利益]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[利益]' />
+          <map key='[利益率]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[利益率]' />
+          <map key='[割引率]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[割引率]' />
+          <map key='[国/領域]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[国/領域]' />
+          <map key='[地域]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[地域]' />
+          <map key='[売上]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[売上]' />
+          <map key='[市区町村]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[市区町村]' />
+          <map key='[数量]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[数量]' />
+          <map key='[製品名]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[製品名]' />
+          <map key='[都道府県]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[都道府県]' />
+          <map key='[顧客区分]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[顧客区分]' />
+          <map key='[顧客名]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[顧客名]' />
+        </cols>
+        <refresh increment-key='[オーダー日]' incremental-updates='true' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ja&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;￥&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ja_JP&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[rank.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;Shift_JIS&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ja&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;￥&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ja_JP&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>オーダー Id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[オーダー Id]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>オーダー Id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>オーダー日</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[オーダー日]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>オーダー日</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>カテゴリ</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[カテゴリ (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>カテゴリ</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>カテゴリ (Rank.Csv)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[カテゴリ (Rank.Csv)]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>カテゴリ (Rank.Csv)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>サブカテゴリ</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[サブカテゴリ]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>サブカテゴリ</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>メーカー</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[メーカー]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>メーカー</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ランク</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ランク (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>ランク</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>出荷モード</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[出荷モード]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>出荷モード</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>出荷日</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[出荷日]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>出荷日</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>利益</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[利益]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>利益</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>国/領域</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[国/領域]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>国/領域</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>地域</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[地域]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>地域</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>市区町村</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[市区町村]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>市区町村</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>製品名</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[製品名]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>製品名</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>都道府県</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[都道府県]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>都道府県</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>顧客区分</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[顧客区分]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>顧客区分</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>顧客名</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[顧客名]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>顧客名</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>レコード数</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[レコード数]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>レコード数</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>レコード数 1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[レコード数 1]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>レコード数 1</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>利益率</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[利益率]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>利益率</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>割引率</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[割引率]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>割引率</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>売上</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[売上]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>売上</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>数量</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[数量]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>数量</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>カテゴリ</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[カテゴリ]</local-name>
+            <parent-name>[rank.csv]</parent-name>
+            <remote-alias>カテゴリ</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ランク</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ランク]</local-name>
+            <parent-name>[rank.csv]</parent-name>
+            <remote-alias>ランク</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' datatype='table' name='[__tableau_internal_object_id__].[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='ja_JP' class='hyper' dbname='C:/Users/sawadayuki/Desktop/サンプル - スーパーストア_サンプル - スーパーストア_移行済みデータ_1.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='09/13/2020 09:33:09 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[オーダー Id]' value='[Extract].[オーダー Id]' />
+            <map key='[オーダー日]' value='[Extract].[オーダー日]' />
+            <map key='[カテゴリ (Rank.Csv)]' value='[Extract].[カテゴリ (Rank.Csv)]' />
+            <map key='[カテゴリ (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]' value='[Extract].[カテゴリ]' />
+            <map key='[カテゴリ]' value='[Extract].[カテゴリ1]' />
+            <map key='[サブカテゴリ]' value='[Extract].[サブカテゴリ]' />
+            <map key='[メーカー]' value='[Extract].[メーカー]' />
+            <map key='[ランク (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]' value='[Extract].[ランク]' />
+            <map key='[ランク]' value='[Extract].[ランク1]' />
+            <map key='[レコード数 1]' value='[Extract].[レコード数 1]' />
+            <map key='[レコード数]' value='[Extract].[レコード数]' />
+            <map key='[出荷モード]' value='[Extract].[出荷モード]' />
+            <map key='[出荷日]' value='[Extract].[出荷日]' />
+            <map key='[利益]' value='[Extract].[利益]' />
+            <map key='[利益率]' value='[Extract].[利益率]' />
+            <map key='[割引率]' value='[Extract].[割引率]' />
+            <map key='[国/領域]' value='[Extract].[国/領域]' />
+            <map key='[地域]' value='[Extract].[地域]' />
+            <map key='[売上]' value='[Extract].[売上]' />
+            <map key='[市区町村]' value='[Extract].[市区町村]' />
+            <map key='[数量]' value='[Extract].[数量]' />
+            <map key='[製品名]' value='[Extract].[製品名]' />
+            <map key='[都道府県]' value='[Extract].[都道府県]' />
+            <map key='[顧客区分]' value='[Extract].[顧客区分]' />
+            <map key='[顧客名]' value='[Extract].[顧客名]' />
+          </cols>
+          <refresh increment-key='[オーダー日]' incremental-updates='true'>
+            <refresh-event add-from-file-path='サンプル - スーパーストア_サンプル - スーパーストア_移行済みデータ_12月除外+' increment-value='#2020-12-31#' refresh-type='create' rows-inserted='10000' timestamp-start='2020-09-13 09:30:42.702' />
+            <refresh-event add-from-file-path='サンプル - スーパーストア_サンプル - スーパーストア_移行済みデータ_12月除外+' increment-value='#2020-12-31#' refresh-type='increment' rows-inserted='0' timestamp-start='2020-09-13 09:30:57.059' />
+            <refresh-event add-from-file-path='サンプル - スーパーストア_サンプル - スーパーストア_移行済みデータ_12月除外+' increment-value='#2020-12-31#' refresh-type='increment' rows-inserted='0' timestamp-start='2020-09-13 09:33:07.619' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>オーダー Id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[オーダー Id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>オーダー Id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2380</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>オーダー日</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[オーダー日]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>オーダー日</remote-alias>
+              <ordinal>1</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1426</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>カテゴリ</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[カテゴリ (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>カテゴリ</remote-alias>
+              <ordinal>2</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>カテゴリ (Rank.Csv)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[カテゴリ (Rank.Csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>カテゴリ (Rank.Csv)</remote-alias>
+              <ordinal>3</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>サブカテゴリ</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[サブカテゴリ]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>サブカテゴリ</remote-alias>
+              <ordinal>4</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>96</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>メーカー</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[メーカー]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>メーカー</remote-alias>
+              <ordinal>5</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ランク</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ランク (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ランク</remote-alias>
+              <ordinal>6</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>出荷モード</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[出荷モード]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>出荷モード</remote-alias>
+              <ordinal>7</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>352</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>出荷日</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[出荷日]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>出荷日</remote-alias>
+              <ordinal>8</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1523</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>利益</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[利益]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>利益</remote-alias>
+              <ordinal>9</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2732</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>国/領域</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[国/領域]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>国/領域</remote-alias>
+              <ordinal>10</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>86</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>地域</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[地域]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>地域</remote-alias>
+              <ordinal>11</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>215</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>市区町村</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[市区町村]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>市区町村</remote-alias>
+              <ordinal>12</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>324</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>製品名</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[製品名]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>製品名</remote-alias>
+              <ordinal>13</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2152</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>都道府県</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[都道府県]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>都道府県</remote-alias>
+              <ordinal>14</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>149</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>顧客区分</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[顧客区分]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>顧客区分</remote-alias>
+              <ordinal>15</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>顧客名</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[顧客名]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>顧客名</remote-alias>
+              <ordinal>16</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1093</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>レコード数</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[レコード数]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>レコード数</remote-alias>
+              <ordinal>17</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>レコード数 1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[レコード数 1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>レコード数 1</remote-alias>
+              <ordinal>18</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>利益率</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[利益率]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>利益率</remote-alias>
+              <ordinal>19</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>255</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>割引率</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[割引率]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>割引率</remote-alias>
+              <ordinal>20</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>売上</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[売上]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>売上</remote-alias>
+              <ordinal>21</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3460</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>数量</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[数量]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>数量</remote-alias>
+              <ordinal>22</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>カテゴリ1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[カテゴリ]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>カテゴリ1</remote-alias>
+              <ordinal>23</ordinal>
+              <family>rank.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ランク1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ランク]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ランク1</remote-alias>
+              <ordinal>24</ordinal>
+              <family>rank.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;日本&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' id='サンプル - スーパーストア_サンプル - スーパーストア_1.csv_A37E5313C3C44D26BEDCBAB5C1E382FE'>
+            <properties context=''>
+              <relation join='left' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[カテゴリ]' />
+                    <expression op='[rank.csv].[カテゴリ]' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.1vgehix0dzuuyl127r20k0cxfvkc' name='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' table='[サンプル - スーパーストア_サンプル - スーパーストア_1#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='ja_JP' separator=','>
+                    <column datatype='string' name='オーダー Id' ordinal='0' />
+                    <column datatype='date' name='オーダー日' ordinal='1' />
+                    <column datatype='string' name='カテゴリ' ordinal='2' />
+                    <column datatype='string' name='カテゴリ (Rank.Csv)' ordinal='3' />
+                    <column datatype='string' name='サブカテゴリ' ordinal='4' />
+                    <column datatype='string' name='メーカー' ordinal='5' />
+                    <column datatype='string' name='ランク' ordinal='6' />
+                    <column datatype='string' name='出荷モード' ordinal='7' />
+                    <column datatype='date' name='出荷日' ordinal='8' />
+                    <column datatype='string' name='利益' ordinal='9' />
+                    <column datatype='string' name='国/領域' ordinal='10' />
+                    <column datatype='string' name='地域' ordinal='11' />
+                    <column datatype='string' name='市区町村' ordinal='12' />
+                    <column datatype='string' name='製品名' ordinal='13' />
+                    <column datatype='string' name='都道府県' ordinal='14' />
+                    <column datatype='string' name='顧客区分' ordinal='15' />
+                    <column datatype='string' name='顧客名' ordinal='16' />
+                    <column datatype='integer' name='レコード数' ordinal='17' />
+                    <column datatype='integer' name='レコード数 1' ordinal='18' />
+                    <column datatype='real' name='利益率' ordinal='19' />
+                    <column datatype='real' name='割引率' ordinal='20' />
+                    <column datatype='integer' name='売上' ordinal='21' />
+                    <column datatype='integer' name='数量' ordinal='22' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1vgehix0dzuuyl127r20k0cxfvkc' name='rank.csv' table='[rank#csv]' type='table'>
+                  <columns character-set='Shift_JIS' header='yes' locale='ja_JP' separator=','>
+                    <column datatype='string' name='カテゴリ' ordinal='0' />
+                    <column datatype='string' name='ランク' ordinal='1' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='test' inline='true' name='federated.09q3n9f03kqdnu195gnel0a3kj62' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='サンプル - スーパーストア_サンプル - スーパーストア_1' name='textscan.0yh1k6p1m72efe1bowi5201ijtgu'>
+            <connection class='textscan' directory='C:/Users/sawadayuki/Desktop' filename='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[カテゴリ]' />
+              <expression op='[rank.csv].[カテゴリ]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0yh1k6p1m72efe1bowi5201ijtgu' name='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' table='[サンプル - スーパーストア_サンプル - スーパーストア_1#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='ja_JP' separator=','>
+              <column datatype='string' name='オーダー Id' ordinal='0' />
+              <column datatype='date' name='オーダー日' ordinal='1' />
+              <column datatype='string' name='カテゴリ' ordinal='2' />
+              <column datatype='string' name='カテゴリ (Rank.Csv)' ordinal='3' />
+              <column datatype='string' name='サブカテゴリ' ordinal='4' />
+              <column datatype='string' name='メーカー' ordinal='5' />
+              <column datatype='string' name='ランク' ordinal='6' />
+              <column datatype='string' name='出荷モード' ordinal='7' />
+              <column datatype='date' name='出荷日' ordinal='8' />
+              <column datatype='string' name='利益' ordinal='9' />
+              <column datatype='string' name='国/領域' ordinal='10' />
+              <column datatype='string' name='地域' ordinal='11' />
+              <column datatype='string' name='市区町村' ordinal='12' />
+              <column datatype='string' name='製品名' ordinal='13' />
+              <column datatype='string' name='都道府県' ordinal='14' />
+              <column datatype='string' name='顧客区分' ordinal='15' />
+              <column datatype='string' name='顧客名' ordinal='16' />
+              <column datatype='integer' name='レコード数' ordinal='17' />
+              <column datatype='integer' name='レコード数 1' ordinal='18' />
+              <column datatype='real' name='利益率' ordinal='19' />
+              <column datatype='real' name='割引率' ordinal='20' />
+              <column datatype='integer' name='売上' ordinal='21' />
+              <column datatype='integer' name='数量' ordinal='22' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0yh1k6p1m72efe1bowi5201ijtgu' name='rank.csv' table='[rank#csv]' type='table'>
+            <columns character-set='Shift_JIS' header='yes' locale='ja_JP' separator=','>
+              <column datatype='string' name='カテゴリ' ordinal='0' />
+              <column datatype='string' name='ランク' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[カテゴリ]' />
+              <expression op='[rank.csv].[カテゴリ]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0yh1k6p1m72efe1bowi5201ijtgu' name='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' table='[サンプル - スーパーストア_サンプル - スーパーストア_1#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='ja_JP' separator=','>
+              <column datatype='string' name='オーダー Id' ordinal='0' />
+              <column datatype='date' name='オーダー日' ordinal='1' />
+              <column datatype='string' name='カテゴリ' ordinal='2' />
+              <column datatype='string' name='カテゴリ (Rank.Csv)' ordinal='3' />
+              <column datatype='string' name='サブカテゴリ' ordinal='4' />
+              <column datatype='string' name='メーカー' ordinal='5' />
+              <column datatype='string' name='ランク' ordinal='6' />
+              <column datatype='string' name='出荷モード' ordinal='7' />
+              <column datatype='date' name='出荷日' ordinal='8' />
+              <column datatype='string' name='利益' ordinal='9' />
+              <column datatype='string' name='国/領域' ordinal='10' />
+              <column datatype='string' name='地域' ordinal='11' />
+              <column datatype='string' name='市区町村' ordinal='12' />
+              <column datatype='string' name='製品名' ordinal='13' />
+              <column datatype='string' name='都道府県' ordinal='14' />
+              <column datatype='string' name='顧客区分' ordinal='15' />
+              <column datatype='string' name='顧客名' ordinal='16' />
+              <column datatype='integer' name='レコード数' ordinal='17' />
+              <column datatype='integer' name='レコード数 1' ordinal='18' />
+              <column datatype='real' name='利益率' ordinal='19' />
+              <column datatype='real' name='割引率' ordinal='20' />
+              <column datatype='integer' name='売上' ordinal='21' />
+              <column datatype='integer' name='数量' ordinal='22' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0yh1k6p1m72efe1bowi5201ijtgu' name='rank.csv' table='[rank#csv]' type='table'>
+            <columns character-set='Shift_JIS' header='yes' locale='ja_JP' separator=','>
+              <column datatype='string' name='カテゴリ' ordinal='0' />
+              <column datatype='string' name='ランク' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[オーダー Id]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[オーダー Id]' />
+          <map key='[オーダー日]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[オーダー日]' />
+          <map key='[カテゴリ (Rank.Csv)]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[カテゴリ (Rank.Csv)]' />
+          <map key='[カテゴリ (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[カテゴリ]' />
+          <map key='[カテゴリ]' value='[rank.csv].[カテゴリ]' />
+          <map key='[サブカテゴリ]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[サブカテゴリ]' />
+          <map key='[メーカー]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[メーカー]' />
+          <map key='[ランク (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[ランク]' />
+          <map key='[ランク]' value='[rank.csv].[ランク]' />
+          <map key='[レコード数 1]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[レコード数 1]' />
+          <map key='[レコード数]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[レコード数]' />
+          <map key='[出荷モード]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[出荷モード]' />
+          <map key='[出荷日]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[出荷日]' />
+          <map key='[利益]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[利益]' />
+          <map key='[利益率]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[利益率]' />
+          <map key='[割引率]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[割引率]' />
+          <map key='[国/領域]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[国/領域]' />
+          <map key='[地域]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[地域]' />
+          <map key='[売上]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[売上]' />
+          <map key='[市区町村]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[市区町村]' />
+          <map key='[数量]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[数量]' />
+          <map key='[製品名]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[製品名]' />
+          <map key='[都道府県]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[都道府県]' />
+          <map key='[顧客区分]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[顧客区分]' />
+          <map key='[顧客名]' value='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[顧客名]' />
+        </cols>
+        <refresh increment-key='[オーダー日]' incremental-updates='true' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ja&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;￥&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ja_JP&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[rank.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;Shift_JIS&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ja&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;￥&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ja_JP&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>オーダー Id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[オーダー Id]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>オーダー Id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>オーダー日</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[オーダー日]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>オーダー日</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>カテゴリ</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[カテゴリ (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>カテゴリ</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>カテゴリ (Rank.Csv)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[カテゴリ (Rank.Csv)]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>カテゴリ (Rank.Csv)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>サブカテゴリ</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[サブカテゴリ]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>サブカテゴリ</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>メーカー</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[メーカー]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>メーカー</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ランク</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ランク (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>ランク</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>出荷モード</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[出荷モード]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>出荷モード</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>出荷日</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[出荷日]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>出荷日</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>利益</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[利益]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>利益</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>国/領域</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[国/領域]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>国/領域</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>地域</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[地域]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>地域</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>市区町村</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[市区町村]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>市区町村</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>製品名</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[製品名]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>製品名</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>都道府県</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[都道府県]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>都道府県</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>顧客区分</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[顧客区分]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>顧客区分</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>顧客名</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[顧客名]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>顧客名</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>レコード数</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[レコード数]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>レコード数</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>レコード数 1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[レコード数 1]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>レコード数 1</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>利益率</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[利益率]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>利益率</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>割引率</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[割引率]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>割引率</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>売上</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[売上]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>売上</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>数量</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[数量]</local-name>
+            <parent-name>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv]</parent-name>
+            <remote-alias>数量</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>カテゴリ</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[カテゴリ]</local-name>
+            <parent-name>[rank.csv]</parent-name>
+            <remote-alias>カテゴリ</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ランク</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ランク]</local-name>
+            <parent-name>[rank.csv]</parent-name>
+            <remote-alias>ランク</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LJA_RJP' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' datatype='table' name='[__tableau_internal_object_id__].[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='ja_JP' class='hyper' dbname='C:/Users/sawadayuki/Desktop/test.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='09/13/2020 09:42:55 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[オーダー Id]' value='[Extract].[オーダー Id]' />
+            <map key='[オーダー日]' value='[Extract].[オーダー日]' />
+            <map key='[カテゴリ (Rank.Csv)]' value='[Extract].[カテゴリ (Rank.Csv)]' />
+            <map key='[カテゴリ (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]' value='[Extract].[カテゴリ]' />
+            <map key='[カテゴリ]' value='[Extract].[カテゴリ1]' />
+            <map key='[サブカテゴリ]' value='[Extract].[サブカテゴリ]' />
+            <map key='[メーカー]' value='[Extract].[メーカー]' />
+            <map key='[ランク (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]' value='[Extract].[ランク]' />
+            <map key='[ランク]' value='[Extract].[ランク1]' />
+            <map key='[レコード数 1]' value='[Extract].[レコード数 1]' />
+            <map key='[レコード数]' value='[Extract].[レコード数]' />
+            <map key='[出荷モード]' value='[Extract].[出荷モード]' />
+            <map key='[出荷日]' value='[Extract].[出荷日]' />
+            <map key='[利益]' value='[Extract].[利益]' />
+            <map key='[利益率]' value='[Extract].[利益率]' />
+            <map key='[割引率]' value='[Extract].[割引率]' />
+            <map key='[国/領域]' value='[Extract].[国/領域]' />
+            <map key='[地域]' value='[Extract].[地域]' />
+            <map key='[売上]' value='[Extract].[売上]' />
+            <map key='[市区町村]' value='[Extract].[市区町村]' />
+            <map key='[数量]' value='[Extract].[数量]' />
+            <map key='[製品名]' value='[Extract].[製品名]' />
+            <map key='[都道府県]' value='[Extract].[都道府県]' />
+            <map key='[顧客区分]' value='[Extract].[顧客区分]' />
+            <map key='[顧客名]' value='[Extract].[顧客名]' />
+          </cols>
+          <refresh increment-key='[オーダー日]' incremental-updates='true'>
+            <refresh-event add-from-file-path='test' increment-value='#2020-11-30#' refresh-type='create' rows-inserted='9617' timestamp-start='2020-09-13 09:39:51.223' />
+            <refresh-event add-from-file-path='test' increment-value='#2020-12-31#' refresh-type='increment' rows-inserted='383' timestamp-start='2020-09-13 09:42:30.490' />
+            <refresh-event add-from-file-path='test' increment-value='#2020-12-31#' refresh-type='increment' rows-inserted='0' timestamp-start='2020-09-13 09:42:54.311' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>オーダー Id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[オーダー Id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>オーダー Id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2380</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>オーダー日</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[オーダー日]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>オーダー日</remote-alias>
+              <ordinal>1</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1426</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>カテゴリ</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[カテゴリ (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>カテゴリ</remote-alias>
+              <ordinal>2</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>カテゴリ (Rank.Csv)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[カテゴリ (Rank.Csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>カテゴリ (Rank.Csv)</remote-alias>
+              <ordinal>3</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>サブカテゴリ</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[サブカテゴリ]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>サブカテゴリ</remote-alias>
+              <ordinal>4</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>96</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>メーカー</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[メーカー]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>メーカー</remote-alias>
+              <ordinal>5</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ランク</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ランク (サンプル - スーパーストア_サンプル - スーパーストア_1.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ランク</remote-alias>
+              <ordinal>6</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>出荷モード</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[出荷モード]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>出荷モード</remote-alias>
+              <ordinal>7</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>352</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>出荷日</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[出荷日]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>出荷日</remote-alias>
+              <ordinal>8</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1523</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>利益</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[利益]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>利益</remote-alias>
+              <ordinal>9</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2732</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>国/領域</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[国/領域]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>国/領域</remote-alias>
+              <ordinal>10</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>86</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>地域</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[地域]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>地域</remote-alias>
+              <ordinal>11</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>215</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>市区町村</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[市区町村]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>市区町村</remote-alias>
+              <ordinal>12</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>324</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>製品名</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[製品名]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>製品名</remote-alias>
+              <ordinal>13</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2152</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>都道府県</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[都道府県]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>都道府県</remote-alias>
+              <ordinal>14</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>149</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>顧客区分</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[顧客区分]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>顧客区分</remote-alias>
+              <ordinal>15</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>顧客名</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[顧客名]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>顧客名</remote-alias>
+              <ordinal>16</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1093</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>レコード数</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[レコード数]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>レコード数</remote-alias>
+              <ordinal>17</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>レコード数 1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[レコード数 1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>レコード数 1</remote-alias>
+              <ordinal>18</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>利益率</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[利益率]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>利益率</remote-alias>
+              <ordinal>19</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>255</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>割引率</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[割引率]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>割引率</remote-alias>
+              <ordinal>20</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>売上</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[売上]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>売上</remote-alias>
+              <ordinal>21</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3460</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>数量</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[数量]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>数量</remote-alias>
+              <ordinal>22</ordinal>
+              <family>サンプル - スーパーストア_サンプル - スーパーストア_1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>カテゴリ1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[カテゴリ]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>カテゴリ1</remote-alias>
+              <ordinal>23</ordinal>
+              <family>rank.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ランク1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ランク]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ランク1</remote-alias>
+              <ordinal>24</ordinal>
+              <family>rank.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LJA' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;日本&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' id='サンプル - スーパーストア_サンプル - スーパーストア_1.csv_32B9E1D23BB846D390AB0C4F18C37BD4'>
+            <properties context=''>
+              <relation join='left' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[サンプル - スーパーストア_サンプル - スーパーストア_1.csv].[カテゴリ]' />
+                    <expression op='[rank.csv].[カテゴリ]' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.0yh1k6p1m72efe1bowi5201ijtgu' name='サンプル - スーパーストア_サンプル - スーパーストア_1.csv' table='[サンプル - スーパーストア_サンプル - スーパーストア_1#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='ja_JP' separator=','>
+                    <column datatype='string' name='オーダー Id' ordinal='0' />
+                    <column datatype='date' name='オーダー日' ordinal='1' />
+                    <column datatype='string' name='カテゴリ' ordinal='2' />
+                    <column datatype='string' name='カテゴリ (Rank.Csv)' ordinal='3' />
+                    <column datatype='string' name='サブカテゴリ' ordinal='4' />
+                    <column datatype='string' name='メーカー' ordinal='5' />
+                    <column datatype='string' name='ランク' ordinal='6' />
+                    <column datatype='string' name='出荷モード' ordinal='7' />
+                    <column datatype='date' name='出荷日' ordinal='8' />
+                    <column datatype='string' name='利益' ordinal='9' />
+                    <column datatype='string' name='国/領域' ordinal='10' />
+                    <column datatype='string' name='地域' ordinal='11' />
+                    <column datatype='string' name='市区町村' ordinal='12' />
+                    <column datatype='string' name='製品名' ordinal='13' />
+                    <column datatype='string' name='都道府県' ordinal='14' />
+                    <column datatype='string' name='顧客区分' ordinal='15' />
+                    <column datatype='string' name='顧客名' ordinal='16' />
+                    <column datatype='integer' name='レコード数' ordinal='17' />
+                    <column datatype='integer' name='レコード数 1' ordinal='18' />
+                    <column datatype='real' name='利益率' ordinal='19' />
+                    <column datatype='real' name='割引率' ordinal='20' />
+                    <column datatype='integer' name='売上' ordinal='21' />
+                    <column datatype='integer' name='数量' ordinal='22' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.0yh1k6p1m72efe1bowi5201ijtgu' name='rank.csv' table='[rank#csv]' type='table'>
+                  <columns character-set='Shift_JIS' header='yes' locale='ja_JP' separator=','>
+                    <column datatype='string' name='カテゴリ' ordinal='0' />
+                    <column datatype='string' name='ランク' ordinal='1' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='シート 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='サンプル - スーパーストア_サンプル - スーパーストア_移行済みデータ_12月除外+' name='federated.1sus9cb1m40u551d2jcsb0xsi5oe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sus9cb1m40u551d2jcsb0xsi5oe'>
+            <column-instance column='[オーダー日]' derivation='Day' name='[dy:オーダー日:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[オーダー日]' derivation='Month' name='[mn:オーダー日:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[オーダー日]' derivation='Year' name='[yr:オーダー日:ok]' pivot='key' type='ordinal' />
+            <column datatype='date' name='[オーダー日]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1sus9cb1m40u551d2jcsb0xsi5oe].[dy:オーダー日:ok]</rows>
+        <cols>([federated.1sus9cb1m40u551d2jcsb0xsi5oe].[yr:オーダー日:ok] / [federated.1sus9cb1m40u551d2jcsb0xsi5oe].[mn:オーダー日:ok])</cols>
+      </table>
+      <simple-id uuid='{7793EF0D-E59B-4B9B-AF16-D4104ABF5E13}' />
+    </worksheet>
+    <worksheet name='シート 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='サンプル - スーパーストア_サンプル - スーパーストア_移行済みデータ_12月除外+' name='federated.1sus9cb1m40u551d2jcsb0xsi5oe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sus9cb1m40u551d2jcsb0xsi5oe'>
+            <column-instance column='[オーダー日]' derivation='Max' name='[max:オーダー日:qk]' pivot='key' type='quantitative' />
+            <column datatype='date' name='[オーダー日]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1sus9cb1m40u551d2jcsb0xsi5oe].[max:オーダー日:qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{686728CB-696D-43C2-9421-3BEA809596A8}' />
+    </worksheet>
+    <worksheet name='シート 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='test' name='federated.09q3n9f03kqdnu195gnel0a3kj62' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09q3n9f03kqdnu195gnel0a3kj62'>
+            <column-instance column='[オーダー日]' derivation='Max' name='[max:オーダー日:qk]' pivot='key' type='quantitative' />
+            <column datatype='date' name='[オーダー日]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.09q3n9f03kqdnu195gnel0a3kj62].[max:オーダー日:qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{01E4DB4C-E971-41CB-B77A-EF6FA1362642}' />
+    </worksheet>
+    <worksheet name='シート 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='test' name='federated.09q3n9f03kqdnu195gnel0a3kj62' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09q3n9f03kqdnu195gnel0a3kj62'>
+            <column-instance column='[オーダー日]' derivation='Month' name='[mn:オーダー日:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[ランク]' derivation='None' name='[none:ランク:nk]' pivot='key' type='nominal' />
+            <column-instance column='[オーダー日]' derivation='Year' name='[yr:オーダー日:ok]' pivot='key' type='ordinal' />
+            <column datatype='date' name='[オーダー日]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[ランク]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.09q3n9f03kqdnu195gnel0a3kj62].[none:ランク:nk]</rows>
+        <cols>([federated.09q3n9f03kqdnu195gnel0a3kj62].[yr:オーダー日:ok] / [federated.09q3n9f03kqdnu195gnel0a3kj62].[mn:オーダー日:ok])</cols>
+      </table>
+      <simple-id uuid='{F4200CBC-2827-44DB-934E-A37204D12BC3}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='75'>
+    <window class='worksheet' name='シート 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1sus9cb1m40u551d2jcsb0xsi5oe].[dy:オーダー日:ok]</field>
+            <field>[federated.1sus9cb1m40u551d2jcsb0xsi5oe].[yr:オーダー日:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5E479A76-AD1C-4F7B-86CA-DF841CEF25B6}' />
+    </window>
+    <window class='worksheet' name='シート 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1sus9cb1m40u551d2jcsb0xsi5oe].[yr:オーダー日:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DE5DB2B8-7B15-4A9E-9FFE-D8A660CE6A42}' />
+    </window>
+    <window class='worksheet' name='シート 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.09q3n9f03kqdnu195gnel0a3kj62].[none:ランク (サンプル - スーパーストア_サンプル - スーパーストア_1.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{43DC17D3-D938-4EC5-99CE-7CDA664FB983}' />
+    </window>
+    <window class='worksheet' maximized='true' name='シート 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.09q3n9f03kqdnu195gnel0a3kj62].[none:ランク:nk]</field>
+            <field>[federated.09q3n9f03kqdnu195gnel0a3kj62].[yr:オーダー日:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B84BAFA0-F461-4FA9-8874-0674BD44EF64}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='シート 2' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='シート 3' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAACLElEQVR4nO3TwQ3DIADAwND9N0ZAV2ilSDx8N4E/Huec80DQGGN8bkfATQYgzQCkGYA0
+      A5BmANIMwM/23s+c83bGqwzAX9ZatxNeZQDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgz
+      AGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQ
+      ZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkG
+      IM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDS
+      DECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0A
+      pBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECa
+      AUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmA
+      NAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgz
+      AGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQ
+      ZgDSDECaAUgzAGkGIM0ApBmAtC+APA5ikn6oEQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='シート 4' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAACLElEQVR4nO3TwQ3DIADAwND9N0ZAV2ilSDx8N4E/Huec80DQGGN8bkfATQYgzQCkGYA0
+      A5BmANIMwM/23s+c83bGqwzAX9ZatxNeZQDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgz
+      AGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQ
+      ZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkG
+      IM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDS
+      DECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0A
+      pBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECa
+      AUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmA
+      NAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgz
+      AGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQZgDSDECaAUgzAGkGIM0ApBmANAOQ
+      ZgDSDECaAUgzAGkGIM0ApBmAtC+APA5ikn6oEQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='184' name='シート 5' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
